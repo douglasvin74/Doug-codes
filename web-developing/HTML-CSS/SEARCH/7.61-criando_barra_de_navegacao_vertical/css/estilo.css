@@ -1,0 +1,28 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a {
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: url(../imagem/menu.png);
+    text-decoration: none;
+    color: black;
+    text-indent: 30px;
+    line-height: 40px;
+    
+}
+
+a:hover {
+    background-position: right;
+    color: white;
+}
+
+#home #navegacao .home a {
+    background-position: right;
+    background-color: #f99200;
+    color: white;
+}

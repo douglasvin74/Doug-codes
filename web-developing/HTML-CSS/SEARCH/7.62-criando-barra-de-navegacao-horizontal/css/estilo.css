@@ -1,0 +1,37 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 720px;
+    background: #159cb0 url(../imagens/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li {
+    float: left;
+    
+    
+}
+ul a {
+    text-decoration: none;
+    display: block;
+    padding: 0 2em;
+    line-height: 40px;
+    color: white;
+    background: url(../imagens/divisor.png) repeat-y;
+    
+}
+
+ul .primeiro a {
+    background: none;
+}
+
+a:hover {
+    background-color: aqua;
+}
+
+#home #navegacao .home a {
+    background-position: right;
+    background-color: aqua;
+    color: white;
+}

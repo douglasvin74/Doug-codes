@@ -1,0 +1,266 @@
+/* Formatação geral */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: white url(../imagens/fundo.png) repeat-x;
+}
+
+#container {
+    width: 750px;
+    margin: 0 auto;
+    
+}
+
+/* Formatação topo */
+
+#topo {
+    height: 150px;
+    padding-top: 25px;
+    background: url(../imagens/detalhe-topo.png) right center no-repeat;
+}
+
+.logo {
+    width: 152px;
+    height: 66px;
+    background: url(../imagens/logo.png) center;
+    text-indent: -3000px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#topo ul {
+    background: #b10333;
+    margin-top: 30px;
+    float: left;
+
+}
+
+#topo ul li {
+    float: left;
+
+    
+}
+
+#topo ul a {
+    font: 0.9em;
+    display: block;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: white;
+    background: url(../imagens/divisor.png) no-repeat left center;
+
+    
+}
+
+#topo ul .primeiro a {
+    background: none;
+}
+
+#topo ul a:hover {
+    color: #69001d;
+    
+}
+
+body.home ul#navegacao a#home,
+body.brasil ul#navegacao a#brasil,
+body.internacional ul#navegacao a#internacional,
+body.economia ul#navegacao a#economia,
+body.saude ul#navegacao a#saude,
+body.ciencias ul#navegacao a#ciencias,
+body.fotos ul#navegacao a#fotos
+
+ {
+    color: white;
+    background: #de003e;
+    cursor: text;
+}
+
+/* Formatação corpo */
+
+
+#conteudo {
+    margin-top: 60px;
+    background: lightblue;
+}
+
+
+#tres-colunas #lateral,
+#duas-colunas #lateral {
+    width: 180px;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: -750px;
+
+}
+
+#duas-colunas #primario {
+    width: 555px;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 195px;
+
+}
+
+#uma-coluna #primario {
+    width: 750px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#tres-colunas #primario {
+    width: 270px;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 195px;
+
+}
+
+#tres-colunas #secundario {
+    width: 270px;
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 15px;
+
+}
+
+
+
+/* Formatação Rodapé */
+
+#container-rodape {
+    background-color:  #294c71;
+    padding: 20px;
+    
+
+}
+
+#rodape {
+    width: 750px;
+    margin: 0 auto;
+    color: white;
+}
+
+/* Formatação conteúdo */
+
+.caixa {
+    background: #f3f3f3 url(../imagens/fundo-caixa.png);
+    margin: 10px 0;
+    padding: 5px;
+}
+
+h2 {
+    font-size: 1.2em;
+    background: #294c71;
+    color: white;
+    padding: 5px;
+}
+
+.caixa-conteudo {
+    background: white;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* Menus laterais */
+
+#lateral ul a {
+    font-size: 0.9em;
+    text-decoration: none;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: #000;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover {
+    color: #a1a1a1;
+    background: #f9f9f9 url(../imagens/marcador.png) no-repeat left center; 
+    padding-left: 25px;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+
+input {
+    font-size: 0.9em;
+    background-color: white;
+    padding: 5px;
+    width: 150px;
+}
+
+input.submit {
+    width: 80px;
+    color: white;
+    background-color: #b10333;
+    border: 2px solid #870529;
+
+}
+
+
+img.imagem-principal {
+    border: 2px solid #dfdfdf;
+    width: 98%;
+}
+
+h3 {
+    text-transform: uppercase;
+    display: inline;
+    font-size: 0.8em;
+    padding: 3px;
+}
+
+.destaque h3 {
+    background-color: #b10333;
+    color: white;
+}
+
+.entrevista h3 {
+    background-color: #de003e;
+    
+}
+
+/* formatando lista */
+
+#lista-noticias li {
+    padding: 2px;
+    border-bottom: 1px solid #ccc;
+    height: 65px;
+}
+
+#lista-noticias li a img {
+    float: left;
+    margin: 5px;
+}
+
+#lista-noticias li a {
+    
+    text-decoration: none;
+}
+
+#lista-noticias li a h3 {
+    color: blue;
+    font-size: 0.8em;
+}
+
+#lista-noticias li a p {
+    font-size: 0.6em;
+}
+
+#lista-noticias li:hover {
+    background: #eee;
+    cursor: pointer;
+}
+
