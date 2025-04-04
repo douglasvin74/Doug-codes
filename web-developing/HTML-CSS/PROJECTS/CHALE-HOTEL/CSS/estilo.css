@@ -13,7 +13,7 @@ body {
 
 #container {
     
-    background: #ede9cc;
+    background: #ede9cc url(../imagens/bg-container.png) repeat-y top center;
     margin: 0 auto;
     min-width: 740px;
     max-width: 1180px;
@@ -124,3 +124,73 @@ ul#navegacao a:hover {
     margin: 15px auto;
 }
 
+/* configuração conteudo */
+
+#area-principal {
+    background: url(../imagens/bg-area-principal.png) repeat-x top left;
+    float: left;
+    width: 50%;
+    padding: 15px 0;
+}
+
+
+#area-lateral {
+    background: url(../imagens/bg-area-lateral.png) repeat-x top left;
+    float: right;
+    width: 50%;
+    padding: 20px 0;
+}
+
+.conteudo {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#rodape {
+    clear: both;
+    padding: 16px;
+    background: white url(../imagens/bg-rodape.png) repeat-x top left;
+    color: #7d7640;
+}
+
+/* Formatações de texto */
+
+h2 {
+    color: #7d7640;
+    font-size: 1.1em;
+    padding: 5px 0;
+    
+}
+
+p {
+    font-size: 1em;
+    padding: 5px 0;
+}
+
+#beneficios li {
+    padding: 8px;
+    border-bottom: 1px solid #f3efcb;
+    height: 6em;
+}
+
+#beneficios li a img {
+    float: left;
+    margin-right: 8px;
+}
+
+#beneficios li a p{
+    color: black;
+    font-size: 0.8em;
+}
+
+#beneficios li a h3 {
+    color: #615b2d;
+    font-size: 1em;
+    padding: 5px 0;
+    background: url(../imagens/ornamento.png) no-repeat top right;
+}
+
+#beneficios li:hover {
+    background: #DFD393;
+    cursor: pointer;
+}
