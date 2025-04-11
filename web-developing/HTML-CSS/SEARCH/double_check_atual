@@ -1,0 +1,86 @@
+function onEdit(e) {
+  const sheet = e.source.getActiveSheet();
+  const range = e.range;
+
+  // Verifica se estamos na última linha preenchida
+  if (range.getRow() === sheet.getLastRow()) {
+    const row = sheet.getRange(range.getRow(), 1, 1, sheet.getLastColumn()).getValues()[0];
+
+    // Lê os valores das colunas especificadas
+    const email = row[1]; // Coluna B
+    const tipoRemessa = row[2]; // Coluna C
+    const canal = row[3]; // Coluna D
+    const sku = row[4]; // Coluna E
+    const remessa = row[5]; // Coluna F
+    const qtde = row[6]; // Coluna G
+    const planilha = row[7]; // Coluna H
+    const status = "Pendente";
+    const resp = "Tadeu";
+    const cliente = row[8]; // Coluna I
+    const tipo_validacao = row[9]; // Coluna J
+    const rev = "REV00";
+    const unidade = row[10]; // Coluna K
+    
+    // Obter a data atual
+    const dataAtual = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "dd/MM/yyyy");
+
+    // Corpo do e-mail em HTML
+    const body = `
+      <html>
+        <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+          <h1 style="color: #2139D1;">Grupo Multi!</h1>
+          <p>Este é um e-mail enviado pelo <strong>Google Apps Script</strong>.</p>  
+          <p style="margin-top: 20px;">Você tem uma nova atualização de Duplo Check Logístico:</p>
+          <ul>
+            <li><strong>Email:</strong> ${email}</li>
+            <li><strong>Tipo de Remessa:</strong> ${tipoRemessa}</li>
+            <li><strong>Canal:</strong> ${canal}</li>
+            <li><strong>SKU:</strong> ${sku}</li>
+            <li><strong>Remessa:</strong> ${remessa}</li>
+            <li><strong>QTDE:</strong> ${qtde}</li>
+            <li><strong>Cliente:</strong> ${cliente}</li>
+            <li><strong>Tipo de Validação:</strong> ${tipo_validacao}</li>
+            <li><strong>Unidade:</strong> ${unidade}</li>
+            <li><strong>Planilha:</strong> ${planilha}</li>
+          </ul>
+          <p style="margin-top: 20px;">Obrigado!</p>
+          <footer style="margin-top: 30px; font-size: 0.9em; color: #888;">
+            <p>Atenciosamente,</p>
+            <p>Engenharia de Aplicações</p>
+          </footer>
+        </body>
+      </html>
+    `;
+
+    // Enviar o e-mail com cópia
+    const recipient = "douglas.prado@grupomulti.com.br"; // Substituir pelo endereço de destino principal
+    const subject = "Nova atualização de Duplo Check Logístico";
+    GmailApp.sendEmail(recipient, subject, "", { htmlBody: body });
+
+
+    // Preencher outra planilha
+    const destinoId = "1yIaCF7wr0O-6UIGatfSBpOqvizGZ613hzEaWds8_Fmw"; // Substitua pelo ID da outra planilha
+    const planilhaDestino = SpreadsheetApp.openById(destinoId);
+    const abaDestino = planilhaDestino.getSheetByName("Pendentes "); // Nome da aba na outra planilha
+
+    // Define a próxima linha vazia na planilha de destino
+    const ultimaLinhaDestino = abaDestino.getLastRow() + 1;
+
+    // Escreve os valores nas colunas específicas
+    abaDestino.getRange(ultimaLinhaDestino, 13).setValue(dataAtual); // Coluna M
+    abaDestino.getRange(ultimaLinhaDestino, 2).setValue(rev); // Coluna B
+    abaDestino.getRange(ultimaLinhaDestino, 4).setValue(sku); // Coluna D
+    abaDestino.getRange(ultimaLinhaDestino, 6).setValue(remessa); // Coluna F
+    abaDestino.getRange(ultimaLinhaDestino, 7).setValue(qtde); // Coluna G
+    abaDestino.getRange(ultimaLinhaDestino, 10).setValue(status); // Coluna J
+    abaDestino.getRange(ultimaLinhaDestino, 11).setValue(resp); // Coluna K
+    abaDestino.getRange(ultimaLinhaDestino, 8).setValue(cliente); // Coluna H
+    abaDestino.getRange(ultimaLinhaDestino, 1).setValue(unidade); // Coluna A
+    abaDestino.getRange(ultimaLinhaDestino, 9).setValue(canal); // Coluna I
+    abaDestino.getRange(ultimaLinhaDestino, 3).setValue(planilha); // Coluna C
+    // Ordena a planilha em ordem crescente pela coluna C (3ª coluna)
+    const rangeParaOrdenar = abaDestino.getRange(2, 1, abaDestino.getLastRow() - 1, abaDestino.getLastColumn());
+    rangeParaOrdenar.sort({ column: 13, ascending: true });
+  }
+}
+

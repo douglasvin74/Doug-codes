@@ -11,6 +11,7 @@
                 margin: 0;
                 padding: 20px;
                 font-size: 16px;
+                text-align: center;
             }
             .container {
                 max-width: 800px;
@@ -78,67 +79,21 @@
                 <p>Este é um e-mail enviado pelo <strong>Google Apps Script</strong>.</p>
                 <p>Você tem uma nova atualização de RAC BRC Brasil:</p>
                 <ul class="data-list">
-                    
-                    
-                    <li><strong>Carimbo de data/hora:</strong><br>${data}</li>
-                    <li><strong>Endereço de e-mail:</strong><br>${email}</li>
-                    <li><strong>Nome:</strong><br>${nome}</li>
-                    <li><strong>Customer / Cliente:</strong><br>${cliente}</li>
-                    <li><strong>Product SKU / SKU do Produto:</strong><br>${sku}</li>
-                    <li><strong>RMA Number / Número do RMA:</strong><br>${rma_number}</li>
-                    <li><strong>Nonconformity / Não Conformidade:</strong><br>${nao_conformidade}</li>
-                    <li><strong>Nonconformity Description / Descrição da Não Conformidade:</strong><br>${descricao_nao_conformidade}</li>
-                    <li><strong>NC Origin / Origem da Não Conformidade:</strong><br>${nc_origin}</li>
-                    <li><strong>Engineering focal point / Contato Engenheiro responsável:</strong><br>${engenheiro}</li>
-                    <li><strong>S/O or PO / Número da nota fisca:</strong><br>${nf}</li>
-                    <li><strong>Date Failed Ocurred / Data da ocorrência de falha:</strong><br>${data_falha}</li>
-                    <li><strong>Businees Impact from Issue / Impacto do problema:</strong><br>${impacto}</li>
-                    <li><strong>Issue Priority / Prioridade do chamado:</strong><br>${prioridade}</li>
-                    <li><strong>Application Information /Aplicação do cliente:</strong><br>${aplicacao_cliente}</li>
-                    <li><strong>Application Intended / Aplicação/Plataforma:</strong><br>${aplicacao_plataforma}</li>
-                    <li><strong>Project Name / Nome da plataforma:</strong><br>${nome_plataforma}</li>
-                    <li><strong>Kernel Version / Versão do Kernel:</strong><br>${kernel}</li>
-                    <li><strong>OS Version / Versão do Sistema Operacional:</strong><br>${os_versao}</li>
-                    <li><strong>Qual Test Flow at customer / Fluxo de teste aplicado(SOP):</strong><br>${fluxo_teste_aplicado}</li>
-                    <li><strong>Fail Log/Test Log per each fail sample / Arquivo de LOG da falha:</strong><br>${log_falha}</li>
-                    <li><strong>System Info / Informações do Sistema:</strong><br>${info_sistema}</li>
-                    <li><strong>System Model:</strong><br>${modelo_sistema}</li>
-                    <li><strong>System Name:</strong><br>${nome_sistema}</li>
-                    <li><strong>System Chipset / CPU:</strong><br>${cpu}</li>
-                    <li><strong>System Boot Fail / Falha na Inicialização:</strong><br>${falha_inicializacao}</li>
-                    <li><strong>No video Fail / Falha de Video:</strong><br>${falha_video}</li>
-                    <li><strong>Memory Diagnostic Fail / Falha de Diagnóstico:</strong><br>${diagnostico_falha}</li>
-                    <li><strong>Suspend Fail / Falha em Suspender:</strong><br>${falha_suspender}</li>
-                    <li><strong>Software Download Fail / Falha durante download de SW:</strong><br>${falha_durante_download_sw}</li>
-                    <li><strong>Functional Fail / Falha Funcional(Descrever):</strong><br>${falha_funcional}</li>
-                    <li><strong>Blue Screen /Tela Azul:</strong><br>${tela_azul}</li>
-                    <li><strong>Other applicable failure information / Outras informações de falha Failure Information:</strong><br>${outras_info_falhas}</li>
-                    <li><strong>Permission for Destructive Testing ?/ Permissão para testes destrutivos?</strong><br>${teste_destrutivo}</li>
-                    <li><strong>Engineer signoff for Destructive Testing / Nome do Engenheiro autorizador para os testes destrutivos:</strong><br>${engenheiro_teste_destrutivo}</li>
-                    <li><strong>Time in Field / Tempo do produto no campo:</strong><br>${tempo_em_campo}</li>
-                    <li><strong>Failure Rate/DPM / Taxa de Falhas:</strong><br>${taxa_falha}</li>
-                    <li><strong>Electrical / Visual Failure? / Falha elétrica / visual?</strong><br>${falha_eletrica}</li>
-                    <li><strong>Usage quantity / Quantidade de peças utilizadas:</strong><br>${quantidade_pecas}</li>
-                    <li><strong>Fail Quantity / Qtde de Falhas:</strong><br>${qtde_falhas}</li>
-                    <li><strong>Customer can reproduce? Cliente pode reproduzir a falha?</strong><br>${cliente_reproduz_falha}</li>
-                    <li><strong>Multilaser can reproduce de fail? / Multilaser consegue reproduzir a falha?</strong><br>${multi_reproduz_falha}</li>
-                    <li><strong>Was the memory swaped? / A memória foi substituída?</strong><br>${memoria_trocada}</li>
-                    <li><strong>After memory swaped, what is the result? Após memória substituída, qual o resultado?</strong><br>${memoria_trocada_resultado}</li>
-                    <li><strong>Reverse Change to duplicate fail? / Foi realizada a reversão para duplicar a falha?</strong><br>${reversa_duplica_falha}</li>
-                    <li><strong>Attachements / Anexos</strong><br>${anexo}</li>
-                    <li><strong>Picture of Label or Component Scribe / Foto da etiqueta ou do componente:</strong><br>${foto_etiqueta}</li>
-                    <li><strong>Screen capture of fail /Captura de tela da falha apresentada:</strong><br>${tela_falha}</li>
-                    <li><strong>Screenshots/additional notesheets / Screenshot & Informações:</strong><br>${screenshot_info}</li>
-                    <li><strong>Additional sheet attachment / Anexos adicionais:</strong><br>${anexo_adicional}</li>
-
-                    
-    
-                </ul>
-            </div>
-            <div class="footer">
-                <p>Atenciosamente,</p>
-                <p><strong>Engenharia de Aplicações</strong></p>
-            </div>
-        </div>
-    </body>
-    </html>
+                    <li><strong>Email:</strong> ${email}</li>
+                    <li><strong>Tipo de Remessa:</strong> ${tipoRemessa}</li>
+                    <li><strong>Canal:</strong> ${canal}</li>
+                    <li><strong>SKU:</strong> ${sku}</li>
+                    <li><strong>Remessa:</strong> ${remessa}</li>
+                    <li><strong>QTDE:</strong> ${qtde}</li>
+                    <li><strong>Cliente:</strong> ${cliente}</li>
+                    <li><strong>Tipo de Validação:</strong> ${tipo_validacao}</li>
+                    <li><strong>Unidade:</strong> ${unidade}</li>
+                    <li><strong>Planilha:</strong> ${planilha}</li>
+                  </ul>
+                  <p style="margin-top: 20px;">Obrigado!</p>
+                  <footer style="margin-top: 30px; font-size: 0.9em; color: #888;">
+                    <p>Atenciosamente,</p>
+                    <p>Engenharia de Aplicações</p>
+                  </footer>
+                </body>
+              </html>

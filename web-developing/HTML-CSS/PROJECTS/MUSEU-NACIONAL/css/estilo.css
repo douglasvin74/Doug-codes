@@ -1,0 +1,170 @@
+/* Formatação Geral */
+
+body {
+    background: #f4f2ec url(../imagens/fundo.png) repeat-x;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    ;
+}
+
+a:link, a:active, a:visited {
+    color: #af670a;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #277115;
+}
+
+/* Topo */
+
+#container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+#logo a {
+    width: 248px;
+    height: 21p;
+    text-indent: -9999px;
+    display: block;
+    background: url(../imagens/logo.png) no-repeat;
+    float: left;
+    
+
+}
+
+/* barra de navegação */
+
+header {
+    padding: 15px 0;
+    height: 55px;
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 20px;
+    float: right;
+    
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a:link {
+    display: block;
+    margin-right: 25px;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    border-bottom: 1px solid #535558;
+}
+
+/* Principal */
+
+#conteudo {
+    width: 720px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+aside {
+    width: 350px;
+    float: right;
+    background: #ebe7dd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+section#visita {
+    background: #cdc8b1;
+    padding: 10px 27px;
+    margin-top: 10px;
+}
+
+h3 {
+    color: #227115;
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #86521a;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    margin-bottom: 0;
+}
+
+input {
+    height: 15px;
+    background: white;
+    border: none;
+    font-size: 1em;
+    width: 80px;
+}
+
+input.campo {
+    border: 1px solid #ada484;
+}
+
+input.botao {
+    background: #929b71;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+fieldset {
+    border: none;
+    
+}
+
+legend {
+    display: none;
+}
+
+section#galeria {
+    padding: 0 27px;
+}
+
+article#video, article#mapa, article#exposicao, article#historia {
+    float: left;
+    width: 310px;
+    margin: 10px 20px;
+}
+
+section#galeria a {
+    display: block;
+    background: url(../imagens/fundo-foto.png) no-repeat;
+    margin: 10px 0 0 20px;
+    float: left;
+    padding: 18px 15px 18px 15px;
+}
+
+section#galeria img {
+    margin-left: 2px;
+    margin-top: 3px;
+}
+
+footer {
+    padding: 20px 0 30px 0;
+    text-align: center;
+    background: url(../imagens/fundo-rodape.png) no-repeat center top;
+    margin-top: 20px;
+}
+
+footer>p a {
+    padding: 2px 10px ;
+   
+}
+
+footer p {
+    color: #af670a;
+}
